@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tello-desktop"
+version = "0.1.0"
+description = "Ubuntu desktop controller for Ryze Tello with keyboard, configurable gamepad and live video"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = ["djitellopy>=2.5,<3", "pygame>=2.5,<3", "opencv-python>=4.8,<5"]
+
+[project.scripts]
+tello-desktop = "tello_desktop.app:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
